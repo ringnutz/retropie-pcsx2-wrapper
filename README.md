@@ -27,6 +27,12 @@ This Python script requires ```evdev``` and ```psutil``` which can both be insta
 
 This will start a Python listener using evdev that upon the specified key press will kill the PCSX2 app (which also shouldn't be too hard to modify for other systems )
 
+You may need to edit the following line 
+
+```gamepad = InputDevice('/dev/input/event19')```
+
+And edit /dev/input/event19 with whichever one your controller is recognized as
+
 When the specified key combo is pressed, it will kill the PCSX2 process, then RetroArch will run the runcommand-onend.sh script
 
 ### runcommand-onend.sh
